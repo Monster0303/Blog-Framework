@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎欢迎，热烈欢迎</title>
+</head>
+<body>
+
+字典是dict(zip('abced', range(1,6)))
+
+<hr>
+<ul>
+    {% for k,v in dct.items %}
+        <li style='background:{{ forloop.counter | divisibleby:"2" | yesno:"red, blue"}}'>
+        {{forloop.counter}} {{k}} {{v}}</li>
+    {% endfor %}
+</ul>
+<hr>
+
+
+</body>
+</html>
